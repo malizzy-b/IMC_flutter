@@ -58,7 +58,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
               },
             ),
             SizedBox(height: 8),
-            BmiCalculator(
+            ImcCalculator(
               gender: gender,
               weightController: weightController,
               heightController: heightController,
@@ -190,7 +190,7 @@ class RadioWidget extends StatelessWidget {
   }
 }
 
-class BmiCalculator extends StatefulWidget {
+class ImcCalculator extends StatefulWidget {
   final String gender;
   final TextEditingController weightController;
   final TextEditingController heightController;
@@ -198,7 +198,7 @@ class BmiCalculator extends StatefulWidget {
   final bool showError;
   final VoidCallback onCalculate;
 
-  const BmiCalculator({
+  const ImcCalculator({
     required this.gender,
     required this.weightController,
     required this.heightController,
@@ -208,10 +208,10 @@ class BmiCalculator extends StatefulWidget {
   });
 
   @override
-  _BmiCalculatorState createState() => _BmiCalculatorState();
+  _ImcCalculatorState createState() => _ImcCalculatorState();
 }
 
-class _BmiCalculatorState extends State<BmiCalculator> {
+class _ImcCalculatorState extends State<ImcCalculator> {
   @override
   Widget build(BuildContext context) {
     return Column(
